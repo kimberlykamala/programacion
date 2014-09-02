@@ -1,0 +1,34 @@
+// salario impuesto.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+{
+float salariobruto,impuesto,afp,salarioneto;
+cout<<"ingrese salariobruto";
+cin>>salariobruto;
+if(salariobruto>2800)
+{(impuesto=salariobruto*0.13);
+     if (salariobruto>4000)
+         afp=salariobruto*0.1271;
+     else
+         afp=0;
+    }
+else
+    {impuesto=0;
+    afp=0;
+    }
+ salarioneto=salariobruto-afp-impuesto;
+ cout<<"el salario neto del trabajador es: ";
+ cout<<salarioneto<<"\n";
+ cout<<"el impuesto del trabajador es: ";
+ cout<<impuesto<<"\n\n";
+ cout<<"la afp del trabajador es: ";
+ cout<<afp<<"\n\n";
+getch();
+}
+
